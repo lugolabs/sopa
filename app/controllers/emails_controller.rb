@@ -20,7 +20,7 @@ class EmailsController < ApplicationController
       campaign_id:   params['campaign-id'],
       campaign_name: params['campaign-name']
     })
-    head :ok
+    render json: { "message": "Post received. Thanks!" }
   end
 
   def opened
