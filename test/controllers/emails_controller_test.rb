@@ -17,7 +17,7 @@ class EmailsControllerTest < ActionDispatch::IntegrationTest
 
     # Check new event created
     assert_difference('Event.count', 1) do
-      get hook_emails_url, params: params
+      post hook_emails_url, params: params
     end
 
     # Check last event created info
