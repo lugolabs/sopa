@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_type: MyString
+  recipient: MyString
+  country: MyString
+  campaign_id: MyString
+  campaign_name: MyString
+
+two:
+  event_type: MyString
+  recipient: MyString
+  country: MyString
+  campaign_id: MyString
+  campaign_name: MyString

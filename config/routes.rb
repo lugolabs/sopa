@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :emails, only: :index do
+    get :hook, on: :collection
+  end
+
+  root 'emails#index'
 end

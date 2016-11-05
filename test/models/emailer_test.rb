@@ -1,5 +1,4 @@
 require 'minitest/autorun'
-# require_relative 'emailer'
 
 class Emailer::ConfigurationTest < Minitest::Test
   # Can set correct configuration
