@@ -16,7 +16,7 @@
     <div class="container m-b-3">
       <div class="row" id="email-container">
         <div class="col-md-3">
-          <div class="list-group">
+          <div class="list-group m-b-3">
             <%= link_to 'New message', emails_path, class: "list-group-item list-group-item-action #{'active' if controller.action_name == 'index'}" %>
             <%= link_to 'Opened messages', opened_emails_path, class: "list-group-item list-group-item-action #{'active' if controller.action_name == 'opened'}" %>
             <%= link_to 'Clicked messages', clicked_emails_path, class: "list-group-item list-group-item-action #{'active' if controller.action_name == 'clicked'}" %>

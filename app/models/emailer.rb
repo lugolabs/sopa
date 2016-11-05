@@ -71,8 +71,8 @@ module Emailer
       response = ''
       begin
         response = Client.post(PATH, params)
-      rescue => e
-        response = "An error occurred with message: #{e.message}"
+      # rescue => e
+        # response = "An error occurred with message: #{e.message}"
       end
       response
     end
