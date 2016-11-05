@@ -4,8 +4,12 @@ class EmailsController < ApplicationController
   end
 
   def create
-    @email = Email.new(email_params)
-    @message = @email.save ? 'Email sent successfully' : ''
+    @message = ''
+    @email   = Email.new(email_params)
+    if @email.save
+      @message = 'Email sent successfully'
+      @email   = Email.new
+    end
   end
 
   def hook

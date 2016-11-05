@@ -1,1 +1,5 @@
 $('#email-form').html('<%= j render("form", email: @email) %>');
+
+<% if @message.present? %>
+  $('#email-form-msg').html('<div class="alert alert-success"><%= @message %></div>');
+<% end %>
