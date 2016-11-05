@@ -1,3 +1,19 @@
-// Place all the styles related to the emails controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: #f7f7f7;
+}
+
+.bg-green {
+  background: #4ab978;
+
+  a, a:visited {
+    color: #fff;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.field_with_errors .form-control {
+  border-color: #f2dede;
+}

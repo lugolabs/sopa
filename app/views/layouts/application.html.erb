@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sopa</title>
+    <title>sopa</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,24 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-light bg-green m-b-3 text-xs-center">
+      <%= link_to 'sopa' %>
+    </nav>
+
+    <div class="container m-b-3">
+      <div class="row" id="email-container">
+        <div class="col-md-3">
+          <div class="list-group">
+            <%= link_to 'New message', emails_path, class: "list-group-item list-group-item-action #{'active' if controller.action_name == 'index'}" %>
+            <%= link_to 'Opened messages', opened_emails_path, class: "list-group-item list-group-item-action #{'active' if controller.action_name == 'opened'}" %>
+            <%= link_to 'Clicked messages', clicked_emails_path, class: "list-group-item list-group-item-action #{'active' if controller.action_name == 'clicked'}" %>
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

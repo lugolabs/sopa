@@ -1,0 +1,19 @@
+<div id="accordion" role="tablist" aria-multiselectable="true">
+  <% events.each do |event| %>
+    <div class="card">
+      <div class="card-header" role="tab" id="ev-head-<%= event.id %>">
+        <h5 class="m-b-0">
+          <%= link_to event.recipient, "#event-#{event.id}", data: { toggle: 'collapse', parent: '#accordion'}, aria: { expanded: true, controls: "event-#{event.id}" } %>
+        </h5>
+      </div>
+
+      <div id="event-<%= event.id %>" class="collapse" role="tabpanel" aria-labelledby="ev-head-<%= event.id %>">
+        <div class="card-block">
+          Country: <%= event.country %><br/>
+          Compaign ID: <%= event.campaign_id %><br/>
+          Compaign Name: <%= event.campaign_name %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,11 @@
+<% if @events.size > 0 %>
+
+  <%= render 'events', events: @events %>
+
+<% else %>
+
+  <div class="card card-block text-muted">
+    No opened messages found.
+  </div>
+
+<% end %>

@@ -1,0 +1,28 @@
+// Custom bootstrap variables must be set or imported before bootstrap itself.
+// https://github.com/twbs/bootstrap-rubygem/blob/master/templates/project/_bootstrap-variables.scss
+$brand-primary: #49a3f2;
+$brand-success: #5fda96;
+$btn-warning-bg: #ecc54d;
+$btn-danger-bg: #fa5562;
+
+$dropdown-bg: #3c4959;
+$dropdown-border-width: 0;
+$dropdown-divider-bg: #515c6a;
+$dropdown-link-color: #989fa7;
+$dropdown-link-hover-color: #dddfe2;
+$dropdown-link-hover-bg: rgba(115, 115, 115, 0.57);
+
+$color-pale: #b5b9bd;
+
+$font-size-base: .9rem;
+$font-size-h1: 1.5rem;
+$font-size-h2: 1.4rem;
+$font-size-h3: 1.3rem;
+$font-size-h4: 1.2rem;
+$font-size-h5: 1.1rem;
+$font-size-h6: 1rem;
+
+$border-radius: .15rem;
+
+@import 'bootstrap';
+@import 'emails';

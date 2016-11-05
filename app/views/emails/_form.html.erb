@@ -1,0 +1,38 @@
+<%= form_for email, remote: true do |f| %>
+ <% if email.errors.any? %>
+    <div class="alert alert-danger">
+      <h6>
+        <i class="icon-wondering"></i>
+        Oops an error occurred
+      </h6>
+
+      <ul class="font-0-9">
+      <% email.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :recipient %>
+    <%= f.text_field :recipient, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :subject %>
+    <%= f.text_field :subject, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :campaign_id %>
+    <%= f.text_field :campaign_id, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.text_area :body, rows: 10, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-success' %>
+<% end %>
