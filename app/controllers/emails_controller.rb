@@ -1,4 +1,6 @@
 class EmailsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: :hook
+
   def index
     @email = Email.new
   end
